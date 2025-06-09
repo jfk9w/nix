@@ -11,6 +11,7 @@
     ];
     plugins = with pkgs.vimPlugins; [
       { plugin = catppuccin-nvim; type = "lua"; config = builtins.readFile ./neovim/plugins/catppuccin-nvim.lua; }
+      { plugin = neo-tree-nvim; type = "lua"; config = builtins.readFile ./neovim/plugins/neo-tree-nvim.lua; }
       { plugin = nvim-colorizer-lua; type = "lua"; config = builtins.readFile ./neovim/plugins/nvim-colorizer-lua.lua; }
       { plugin = guess-indent-nvim; type = "lua"; config = builtins.readFile ./neovim/plugins/guess-indent-nvim.lua; }
       { plugin = gitsigns-nvim; type = "lua"; config = builtins.readFile ./neovim/plugins/gitsigns-nvim.lua; }
