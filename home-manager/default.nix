@@ -3,7 +3,7 @@
     ./kitty.nix
     ./zoxide.nix
     ./aerospace.nix
-    ./nixvim.nix
+    ./neovim.nix
   ];
   programs = {
     home-manager.enable = true;
