@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   nixpkgs.config = {
     allowUnfree = true;
     allowBroken = true;
@@ -10,17 +6,17 @@
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = [
-    pkgs.nerd-fonts.mononoki
-    pkgs.fzf
-    pkgs.neovim
-    pkgs.alejandra
-    pkgs.nixd
-    pkgs.git
-    pkgs.git-lfs
-    pkgs.keepassxc
-    pkgs.go
-    pkgs.golangci-lint
+  environment.systemPackages = with pkgs; [
+    nerd-fonts.mononoki
+    fzf
+    neovim
+    alejandra
+    nixd
+    git
+    git-lfs
+    keepassxc
+    go
+    golangci-lint
   ];
 
   # Necessary for using flakes on this system.
@@ -30,7 +26,7 @@
   programs.fish.enable = true;
 
   # Set Git commit hash for darwin-version.
-  system.configurationRevision = self.rev or self.dirtyRev or null;
+  # system.configurationRevision = self.rev or self.dirtyRev or null;
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
