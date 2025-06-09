@@ -31,14 +31,10 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {
-                inherit inputs;
+              users.iakulkov = {...}: {
+                imports = [./home-manager];
+                home.stateVersion = "25.05";
               };
-              users.iakulkov = {...}:
-                with inputs; {
-                  imports = [./home-manager];
-                  home.stateVersion = "25.05";
-                };
             };
           }
         ];
