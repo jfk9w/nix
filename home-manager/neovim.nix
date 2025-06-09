@@ -2,6 +2,10 @@
   programs.neovim = {
     enable = true;
     extraPackages = with pkgs; [
+      # Lua
+      lua-language-server
+      stylua
+      # Nix
       nixd
       alejandra
     ];
