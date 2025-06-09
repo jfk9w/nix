@@ -11,9 +11,9 @@
       fidget-nvim
       blink-cmp
       {
-        plugin = solarized-nvim;
+        plugin = catppuccin-nvim;
         type = "lua";
-        config = builtins.readFile ./neovim/plugins/solarized.lua;
+        config = builtins.readFile ./neovim/plugins/catppuccin.lua;
       }
     ];
     extraLuaConfig = builtins.readFile ./neovim/init.lua;
