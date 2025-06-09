@@ -10,15 +10,11 @@
       alejandra
     ];
     plugins = with pkgs.vimPlugins; [
-      which-key-nvim
-      nvim-lspconfig
-      fidget-nvim
-      blink-cmp
-      {
-        plugin = catppuccin-nvim;
-        type = "lua";
-        config = builtins.readFile ./neovim/plugins/catppuccin.lua;
-      }
+      { plugin = catppuccin-nvim; type = "lua"; config = builtins.readFile ./neovim/plugins/catppuccin-nvim.lua; }
+      { plugin = nvim-colorizer-lua; type = "lua"; config = builtins.readFile ./neovim/plugins/nvim-colorizer-lua.lua; }
+      { plugin = telescope-nvim; type = "lua"; config = builtins.readFile ./neovim/plugins/telescope-nvim.lua; }
+      telescope-fzf-native-nvim
+      { plugin = nvim-lspconfig; type = "lua"; config = builtins.readFile ./neovim/plugins/nvim-lspconfig.lua; }
     ];
     extraLuaConfig = builtins.readFile ./neovim/init.lua;
   };
