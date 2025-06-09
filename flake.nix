@@ -20,8 +20,6 @@
     home-manager,
     ...
   } @ inputs: {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#macnug
     darwinConfigurations = {
       macnug = nix-darwin.lib.darwinSystem {
         modules = [
