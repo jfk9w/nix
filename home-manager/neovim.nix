@@ -10,7 +10,12 @@
       nvim-lspconfig
       fidget-nvim
       blink-cmp
+      {
+        plugin = solarized.nvim;
+        type = "lua";
+        config = builtins.readFile ./neovim/solarized.lua;
+      }
     ];
-    extraLuaConfig = (builtins.readFile ./neovim/init.lua);
+    extraLuaConfig = builtins.readFile ./neovim/init.lua;
   };
 }
