@@ -1,5 +1,5 @@
-(function()
-    vim.o.background = 'light';
-    require('catppuccin').setup();
-    vim.cmd.colorscheme 'catppuccin';
-end)();
+do
+  vim.o.background = "light"
+  require("catppuccin").setup()
+  vim.cmd.colorscheme("catppuccin")
+end
