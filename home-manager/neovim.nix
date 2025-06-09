@@ -5,8 +5,12 @@
       nixd
       alejandra
     ];
-    plugins = [
-      blink.cmp
+    plugins = with pkgs.vimPlugins; [
+      which-key-nvim
+      nvim-lspconfig
+      fidget-nvim
+      blink-cmp
     ];
+    extraLuaConfig = (builtins.readFile ./neovim/init.lua);
   };
 }
