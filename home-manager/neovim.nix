@@ -2,6 +2,9 @@
   programs.neovim = {
     enable = true;
     extraPackages = with pkgs; [
+      # Search
+      fzf
+      ripgrep
       # Lua
       lua-language-server
       stylua
@@ -63,4 +66,3 @@
     extraLuaConfig = builtins.readFile ./neovim/init.lua;
   };
 }
-
