@@ -5,6 +5,7 @@
 }: {
   home.packages = with pkgs; [
     go
+    golangci-lint
   ];
   home.activation = {
     setGoEnv = lib.hm.dag.entryAfter ["writeBoundary"] ''
