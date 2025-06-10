@@ -19,6 +19,16 @@
         config = builtins.readFile ./neovim/plugins/catppuccin-nvim.lua;
       }
       {
+        plugin = todo-comments-nvim;
+        type = "lua";
+        config = builtins.readFile ./neovim/plugins/todo-comments-nvim.lua;
+      }
+      {
+        plugin = mini-nvim;
+        type = "lua";
+        config = builtins.readFile ./neovim/plugins/mini-nvim.lua;
+      }
+      {
         plugin = neo-tree-nvim;
         type = "lua";
         config = builtins.readFile ./neovim/plugins/neo-tree-nvim.lua;
