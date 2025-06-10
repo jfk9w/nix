@@ -5,7 +5,7 @@
     font.name = "Mononoki Nerd Font Mono";
     font.package = pkgs.nerd-fonts.mononoki;
     font.size = 15;
-    themeFile = "solarized_light";
+    themeFile = "relaxed_afterglow";
     shellIntegration = {
       enableFishIntegration = true;
     };
