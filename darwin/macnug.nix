@@ -11,8 +11,6 @@
     git
     git-lfs
     keepassxc
-    go
-    golangci-lint
   ];
 
   # Necessary for using flakes on this system.
