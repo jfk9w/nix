@@ -66,7 +66,24 @@
         config = builtins.readFile ./neovim/plugins/nvim-lspconfig.lua;
       }
       fidget-nvim
-      blink-cmp
+      {
+        plugin = friendly-snippets;
+        type = "lua";
+        config = builtins.readFile ./neovim/plugins/friendly-snippets.lua;
+      }
+      luasnip
+      {
+        plugin = blink-cmp;
+        type = "lua";
+        config = builtins.readFile ./neovim/plugins/blink-cmp.lua;
+      }
+      {
+        plugin = nvim-treesitter;
+        type = "lua";
+        config = builtins.readFile ./neovim/plugins/nvim-treesitter.lua;
+      }
+      nvim-treesitter-parsers.lua
+      nvim-treesitter-parsers.nix
       {
         plugin = conform-nvim;
         type = "lua";
