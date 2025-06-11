@@ -50,15 +50,15 @@
         # Kitty
         alt-q = "exec-and-forget ${pkgs.kitty}/bin/kitty ~";
       };
-      # on-window-detected = [
-      #   {
-      #     check-further-callbacks = false;
-      #     "if" = {
-      #       app-id = "org.keepassxc.keepassxc";
-      #     };
-      #     run = ["layout floating"];
-      #   }
-      # ];
+      on-window-detected = [
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "org.keepassxc.keepassxc";
+          };
+          run = ["layout floating"];
+        }
+      ];
     };
   };
 }
