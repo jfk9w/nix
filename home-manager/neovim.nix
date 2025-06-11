@@ -5,6 +5,8 @@
       # Search
       fzf
       ripgrep
+      # Git
+      lazygit
       # Lua
       lua-language-server
       stylua
@@ -15,6 +17,12 @@
       gopls
     ];
     plugins = with pkgs.vimPlugins; [
+      plenary-nvim
+      {
+        plugin = lazygit-nvim;
+        type = "lua";
+        config = builtins.readFile ./neovim/plugins/lazygit-nvim.lua;
+      }
       {
         plugin = catppuccin-nvim;
         type = "lua";
