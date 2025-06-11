@@ -11,6 +11,8 @@
       # Nix
       nixd
       alejandra
+      # Go
+      gopls
     ];
     plugins = with pkgs.vimPlugins; [
       {
@@ -84,6 +86,11 @@
       }
       nvim-treesitter-parsers.lua
       nvim-treesitter-parsers.nix
+      nvim-treesitter-parsers.go
+      nvim-treesitter-parsers.gotmpl
+      nvim-treesitter-parsers.gowork
+      nvim-treesitter-parsers.gomod
+      nvim-treesitter-parsers.gosum
       {
         plugin = conform-nvim;
         type = "lua";

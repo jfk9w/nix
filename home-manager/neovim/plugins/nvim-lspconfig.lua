@@ -169,8 +169,9 @@ do
   --  So, we create new capabilities with blink.cmp, and then broadcast that to the servers.
   local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-  vim.lsp.enable("lua_ls")
-  vim.lsp.config("lua_ls", {
+  local lspconfig = require("lspconfig")
+
+  lspconfig.lua_ls.setup({
     capabilities = capabilities,
     settings = {
       Lua = {
@@ -183,8 +184,7 @@ do
     },
   })
 
-  vim.lsp.enable("nixd")
-  vim.lsp.config("nixd", {
+  lspconfig.nixd.setup({
     capabilities = capabilities,
     settings = {
       nixd = {
@@ -202,4 +202,6 @@ do
       },
     },
   })
+
+  lspconfig.gopls.setup({})
 end
