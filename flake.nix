@@ -23,8 +23,9 @@
     darwinConfigurations = {
       macnug = nix-darwin.lib.darwinSystem {
         modules = [
-          home-manager.darwinModules.home-manager
           ./darwin/macnug.nix
+          home-manager.darwinModules.home-manager
+          ./home-manager/macnug.nix
         ];
       };
     };
