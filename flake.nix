@@ -25,17 +25,7 @@
         modules = [
           ./darwin/macnug.nix
           home-manager.darwinModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              imports = [./home-manager/macnug.nix];
-              users.iakulkov = {...}: {
-                imports = [./home-manager];
-                home.stateVersion = "25.05";
-              };
-            };
-          }
+          ./home-manager/macnug.nix
         ];
       };
     };
