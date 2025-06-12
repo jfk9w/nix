@@ -25,7 +25,6 @@
         modules = [
           ./darwin/macnug.nix
           home-manager.darwinModules.home-manager
-          ./home-manager/macnug.nix
         ];
       };
     };

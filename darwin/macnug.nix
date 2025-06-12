@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  home-manager,
+  ...
+}: {
   nixpkgs.config = {
     allowUnfree = true;
     allowBroken = true;
@@ -36,6 +40,14 @@
     iakulkov = {
       home = "/Users/iakulkov";
       shell = pkgs.fish;
+    };
+  };
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.iakulkov = {
+      imports = [../home-manager/macnug.nix];
     };
   };
 }
