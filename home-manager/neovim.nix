@@ -18,6 +18,7 @@
     ];
     plugins = with pkgs.vimPlugins; [
       plenary-nvim
+      nvim-nio
       {
         plugin = lazygit-nvim;
         type = "lua";
@@ -104,6 +105,12 @@
         type = "lua";
         config = builtins.readFile ./neovim/plugins/conform-nvim.lua;
       }
+      {
+        plugin = neotest;
+        type = "lua";
+        config = builtins.readFile ./neovim/plugins/neotest.lua;
+      }
+      neotest-golang
     ];
     extraLuaConfig = builtins.readFile ./neovim/init.lua;
   };
