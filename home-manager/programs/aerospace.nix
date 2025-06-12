@@ -3,6 +3,9 @@
     enable = true;
     userSettings = {
       start-at-login = true;
+      after-startup-command = [
+        "exec-and-forget borders active_color=0xffa062fc inactive_color=0xff524850 width=5.0 style=round"
+      ];
       gaps = {
         inner.horizontal = 2;
         inner.vertical = 2;

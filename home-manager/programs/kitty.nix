@@ -11,7 +11,9 @@
     };
     settings = {
       shell = "${pkgs.fish}/bin/fish";
-      hide_window_decorations = "yes";
+      background_opacity = 0.9;
+      hide_window_decorations = "titlebar-only";
+      window_padding_width = 4;
       macos_quit_when_last_window_closed = "yes";
     };
   };
